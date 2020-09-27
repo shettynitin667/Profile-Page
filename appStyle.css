@@ -1,0 +1,227 @@
+/* Navbar--------------------------------------------------------------- */
+nav li{
+    float: left;
+}
+
+nav ul{
+    list-style-type: none;
+    margin:0;
+    line-height: 80px;
+}
+
+nav li a{
+    text-decoration: none;
+    display: block;
+    padding: 0 40px;
+    color: white;
+    transition: background 0.2s;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav li a:hover{
+    color:white;
+    background: rgba(0, 0, 0, 0.253);
+}
+
+body,html{
+    margin:0;
+    padding:0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: rgba(0, 162, 255, 0.288);
+    scroll-behavior: smooth;
+}
+
+nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: rgba(0, 153, 255, 0.904);
+    position: fixed;
+    top:0;
+    overflow: hidden;   
+    height:80px; 
+    z-index: 2;
+}
+
+/* -------------------------------------------------------------------- */
+
+#welcome-section{
+    position: fixed;
+    /* top:80px; */
+    width: 100vw;
+    height: 100vh;  
+}
+
+#photo{
+    position: relative;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background: url('https://web.whatsapp.com/pp?e=https%3A%2F%2Fpps.whatsapp.net%2Fv%2Ft61.24694-24%2F69004012_2299390353443125_8822700963082010624_n.jpg%3Foe%3D5EDCF0B8%26oh%3D2f7b87869e16e9ec4a2d5e8278b38378&t=l&u=918108553241%40c.us&i=1566626666&n=k3h92X4DY9K9rOz0uOxqfzSfPiErTFEiP339RKGPK5k%3D');
+    background-position: center;
+    background-size: cover;
+    border: 3px solid white;
+    top: 200px;
+    margin:auto;
+    transition: box-shadow 0.4s;
+    z-index:1;
+}
+
+
+#photo:hover{
+    box-shadow: 0 0 35px rgb(0, 132, 255);
+}
+
+#welcome-section h1{
+    position: relative;
+    text-align: center;
+    color: black;
+    margin-top: 220px;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: 2.5rem;
+    z-index:1;
+    letter-spacing: 0.9px;
+}
+
+#welcome-section span{
+    color:rgba(0, 81, 255, 0.788);
+    opacity:0;
+    transition: opacity 0.3s;
+}
+
+#photo:hover  + h1  span{
+    opacity: 1;
+}
+
+
+/* ----------------------------------------------------------------------- */
+
+/* Projects--------------------------------------------------------------- */
+
+#project_container{
+    background: rgb(82, 80, 80);
+    position: relative;
+    top: 750px;
+    bottom: 0px;
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin:0;
+    padding: 50px 0px 0px 0px;
+    height: 100%;
+    overflow: hidden;
+}
+
+#projects{
+    margin:0;
+    display: grid;  
+    grid-template-columns: 400px 400px 400px;
+    justify-content:space-evenly ;
+    column-gap: 40px;
+    row-gap: 40px;
+    padding:50px 100px 0 100px;
+}
+
+.project_title{
+    color:white;
+    background: rgba(0, 238, 255, 0.308);
+    padding:15px;
+}
+
+img{
+    vertical-align: middle;
+    height: 35vh;
+    object-fit: cover;
+}
+
+#projects a{
+    text-decoration: none;
+    color:white;
+    font-size: 1.2rem;
+    transition: transform 0.3s;
+}
+
+#projects a:hover{
+    transform: scale(1.08);
+}
+
+
+#first img, #second img, #third img,#forth img{
+    max-width: 900px;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    margin:0;
+}
+/* ------------------------------------------------------------------------ */
+
+
+
+/* Profile---------------------------------------------------------------- */
+
+#profile{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+}
+
+
+
+#profile-link{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: -2px 1px 2px black ;
+    display: block;
+    transition: transform 0.3s;
+}
+
+#profile-link:hover{
+    transform: scale(1.1);
+}
+
+hr{
+    border: 3px solid rgba(0, 153, 255, 0.904);
+}
+
+hr + p{
+    width:50%;
+    text-align: right;
+    margin: auto;
+    padding: 5px 0 30px 0;
+    font-size: 0.99rem;
+    color: rgba(255, 255, 255, 0.719);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Media queries---------------------------------------------------------------- */
+@media(max-width: 1339px){
+    #projects{
+        grid-template-columns: 1fr 1fr 1fr;
+        padding:50px 30px 0px 30px;
+    }
+}
+
+@media(max-width: 1085px){
+    #projects{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 890px){
+    #projects{
+        grid-template-columns: 1fr;
+    }
+
+    #first, #second, #third,#forth{
+        width: 100%;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
